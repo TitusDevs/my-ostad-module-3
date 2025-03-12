@@ -39,5 +39,7 @@ jobs:
           name: test-results
       - name: Display artifact content
         run: cat test-results.txt
+      - name: Set execute permission for deploy.sh
+        run: chmod +x deploy.sh
       - name: Deploy Node.js application
-        run: ./deploy.sh 
+        run: ./deploy.sh
