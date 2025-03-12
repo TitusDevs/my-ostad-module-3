@@ -39,8 +39,6 @@ jobs:
           name: test-results
       - name: Display artifact content
         run: cat test-results.txt
-      - name: Set execute permission for deploy.sh
-        run: chmod +x deploy.sh
       - name: Cleanup existing node-app process
         run: pm2 delete node-app || true
       - name: Start Node.js application with PM2
